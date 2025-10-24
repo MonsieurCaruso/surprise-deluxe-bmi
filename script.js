@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Karte 1 (Startet leicht verzögert)
         setTimeout(() => {
-            card1Text.innerHTML = `Hallo <strong>${name}</strong>! Mal ehrlich... <br>wen interessiert schon der BMI?`;
+            card1Text.innerHTML = `Hallo <strong>Philipp</strong>! Mal ehrlich... <br>wen interessiert schon der BMI?`;
             card1.classList.add("show");
         }, 500); 
 
