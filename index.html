@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die BMI Überraschung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="form-container">
+        <form id="bmi-form">
+            <h2>Die ultimative BMI-Maschine?</h2>
+            <div class="form-group">
+                <label for="name">Dein Name:</label>
+                <input type="text" id="name" required placeholder="z.B. Max Mustermann">
+            </div>
+            <div class="form-group">
+                <label for="height">Größe (in cm):</label>
+                <input type="number" id="height" required placeholder="z.B. 180">
+            </div>
+            <div class="form-group">
+                <label for="weight">Gewicht (in kg):</label>
+                <input type="number" id="weight" required placeholder="z.B. 75">
+            </div>
+            <button type="submit">Berechnen!</button>
+        </form>
+    </div>
+
+    <div id="card-container">
+        
+        <div class="card" id="card1">
+            <p id="card1-text"></p>
+        </div>
+
+        <div class="card" id="card2">
+            <p>Viel, viel wichtiger ist doch die eine Frage:</p>
+        </div>
+
+        <div class="card" id="card3">
+            <p>Heute ist der <span>25.</span></p>
+            <p>...also, wo bleibt die Kohle? 😉</p>
+        </div>
+
+    </div>
+
+    <div id="footer-bmi">
+        <p id="bmi-result-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

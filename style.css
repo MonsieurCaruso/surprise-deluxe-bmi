@@ -1,0 +1,172 @@
+/* Grund-Styling & Formular-Styling... (alles unverändert) */
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    perspective: 1500px;
+    overflow: hidden; 
+}
+
+#form-container {
+    background: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    width: 90vw; 
+    max-width: 500px; 
+    transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#form-container.hidden {
+    opacity: 0;
+    transform: scale(0.7) rotateZ(-10deg);
+    pointer-events: none; 
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+button:hover {
+    background-color: #ff4757;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+}
+
+
+/* --- KARTEN-STYLING (unverändert) --- */
+
+#card-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden; 
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 650px; 
+    min-height: 400px; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem; 
+    font-weight: 300;
+    color: #222;
+    transform: translate(-50%, 150vh) rotateX(-90deg) rotateZ(45deg);
+    transition: all 1.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.card.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) rotateX(0deg) rotateZ(0deg);
+}
+
+/* Styling für Karte 3 (unverändert) */
+#card3 span {
+    font-size: 7rem; 
+    font-weight: 700;
+    color: #ff6b6b;
+    display: block;
+    margin: 0.5rem 0;
+    line-height: 1;
+}
+
+/* !! ÄNDERUNG: Styling für den neuen Footer-Container */
+#footer-bmi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    
+    /* Startet unsichtbar und unten */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
+}
+
+#footer-bmi.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#footer-bmi p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+#footer-bmi strong {
+    font-weight: 700;
+    color: #ffc107; /* Ein kleines Highlight */
+}
